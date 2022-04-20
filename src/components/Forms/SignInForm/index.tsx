@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
+import analytics from '@react-native-firebase/analytics';
 import auth from '@react-native-firebase/auth';
 
 import { FooterButton } from '@components/Controllers/FooterButton';
@@ -17,7 +18,7 @@ export function SignInForm() {
 
   const navigation = useNavigation();
 
-  function handleSignIn() {
+  async function handleSignIn() {
     setIsLoading(true);
 
     auth()
@@ -27,6 +28,11 @@ export function SignInForm() {
       setIsLoading(false)
       console.log(error)
     });
+
+    await analytics().logLogin({
+      method: 'email'
+    });
+
   }
 
   function handleForgotPassword() {

@@ -1523,6 +1523,11 @@
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
 
+"@react-native-firebase/analytics@^14.8.0":
+  version "14.8.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/analytics/-/analytics-14.8.0.tgz#3865c32a04076a0f9bd775ff7ae7fa2279a109da"
+  integrity sha512-JgmEVvTLxL5rVyOGHyo5XqWnbsBN66XenaXTq3Bxa2p5aCTxuUkxw09SKion28tXEq63uCt8YwlEtecmpNqaTA==
+
 "@react-native-firebase/app@^14.7.0":
   version "14.7.0"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-14.7.0.tgz#a12f120c2c6a437284a30391cb16670422d48a7e"

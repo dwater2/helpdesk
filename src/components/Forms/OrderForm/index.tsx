@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import analytics from '@react-native-firebase/analytics';
 import firestore from '@react-native-firebase/firestore';
 
 import { Form, Title } from './styles';
@@ -13,7 +14,7 @@ export function OrderForm() {
   const [description, setDescription] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  function handleNewOrder() {
+  async function handleNewOrder() {
     setIsLoading(true);
 
     firestore()
@@ -27,8 +28,18 @@ export function OrderForm() {
     .then(()=> Alert.alert('Chamado', 'Chamado aberto com sucesso!'))
     .catch((error)=> console.log(error))
     .finally(()=> setIsLoading(false));
+
+    
+    await analytics().logEvent('suporte', {
+      id: 'suport_event',
+      item: patrimony,
+      description: [description, 'open'],
+      size: 'L',
+    });
   }
 
+
+  
   return (
     <Form>
       <Title>Novo chamado</Title>
