@@ -11,6 +11,8 @@ App to manage maintenance calls. App to manage maintenance calls. This applicati
 - Firebase Auth
 - Password recovery with e-mail
 - Firebase Firestore with Real Time updates
+- Analyze Google Firebase Analytics reports
+- Link Google Tag Manager
 - And more...
 
 
@@ -21,8 +23,6 @@ App to manage maintenance calls. App to manage maintenance calls. This applicati
 - Create new order
 - List orders
 - Show real time status
-- Analyze Google Firebase Analytics reports
-- Link Google Tag Manager
 - And more...
 
 
